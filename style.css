@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Flow+Circular&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --a: 0;
+}
+
+/* this is to import that goog;e font */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+    /* this declares to use roboto as the font */
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+
+.left {
+    width: 25%;
+    height: 60%;
+    margin: 0px 0px 0px 0px;
+    position:relative;
+    
+}
+
+
+.left img {
+    margin: 6px;
+}
+
+.hamburger {
+    display: none;
+    /* since initially we want to keep it unvisible and it will be made visible only when the media query given below is reached where we have made display as block */
+
+}
+
+.right {
+    width: 75%;
+    height: 100vh;
+    margin: 0px 0px 0px 1px;
+    /* now to provide scroll bar we will use max-height and overflow properties */
+    /* max-width: 100vh; */
+    /* overflow: scroll; */
+    position: relative;
+}
+
+
+
+.home {
+    margin: 0px 0px 0px 0px;
+    /* height:140px; */
+}
+
+.home img {
+    margin: 10px
+}
+
+.home ul li {
+    display: flex;
+    list-style: none;
+    gap: 13px;
+    padding-top: 10px;
+}
+
+.home ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.library {
+    position: relative;
+    min-height: 71vh;
+}
+
+.heading {
+    width: 100%;
+    display: inline;
+    position: relative;
+    gap: 13px;
+}
+
+.libplus {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    /* note that this right property will not work if u do not give position to its parent that is to .heading otherwise it moves according to the body(html) */
+}
+
+.box1 {
+    font-size: large;
+    margin: 27px 7px 7px 11px;
+    /* top right bottom left */
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.box1 div {
+    font-size: small;
+}
+
+.box2 div {
+    font-size: small;
+}
+
+.box1 button {
+    padding: 10px;
+    border-radius: 50px;
+    width: 140px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.box2 {
+    font-size: large;
+    margin: 27px 7px 7px 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.box2 button {
+    padding: 10px;
+    border-radius: 50px;
+    width: 140px;
+    font-size: medium;
+    font-weight: bolder;
+}
+
+.songlist {
+    margin: 25px 0px 0px 0px;
+    /* border: 2px solid red; */
+    height: 190px;
+    max-height: 83vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.songlist ul {
+    padding: 0px 12px;
+
+}
+
+.songlist ul li {
+    list-style-type: none;
+    font-size: 12px;
+    gap: 14px;
+    padding-top: 12px;
+    cursor: pointer;
+    width: 100%;
+    height: fit-content;
+    border: 2px solid white;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.limusic {
+    padding: 6px 0px 6px 0px;
+    margin: 6px 0px 6px 0px;
+}
+
+.info {
+    gap: 3px;
+    flex-direction: column;
+    width:50%;
+}
+
+.left-footer {
+    margin: 10px 0px 30px 0px;
+    width:fit-content;
+    position: relative;
+    /* border: 2px solid green; */
+    bottom: 0px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction:column;
+    font-size: 10px;
+    gap: 13px;
+    z-index: 10;
+}
+
+.left-footer a {
+    color: grey;
+    text-decoration: none;
+    font-size: 10px;
+}
+.left-footer div{
+    display:flex;
+    /* flex-direction: column; */
+    gap:10px;
+}
+hr{
+    width:100vw;
+    /* height:3px; */
+    border:1px solid grey
+}
+
+
+
+.right nav img {
+    width: 35px;
+}
+
+.header {
+    padding:15px;
+    /* height:100px; */
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    /* note that whenever we assign the position as sticky then we need to set its top,bottom,right,left as per the need otherwise the sticky functionality will not work */
+    background-color: #121212;
+    justify-content: space-between;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding:0px;
+    margin:20px;
+    width:100vw
+}
+.searchbutton{
+    color:white;
+    border-radius: 10px;
+    margin:3px;
+}
+
+.input {
+    height: 46px;
+    width: 343px;
+    border: 2px solid rgb(46, 42, 42);
+    border-radius: 20px;
+    padding-left: 10px;
+    margin:3px;
+}
+
+.rightnav ul li {
+    list-style: none;
+    padding: 17px;
+}
+
+.rightnav ul li:hover {
+    scale: 1.2;
+}
+.leftnav{
+    height:100%;
+}
+.navbutton button {
+    padding: 20px;
+}
+
+.signup {
+    background-color: #121212;
+    color: white;
+    border: 2px solid #121212;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.signup:hover {
+    scale: 1.2;
+    cursor: pointer;
+
+}
+
+.login:hover {
+    scale: 1.2;
+    cursor: pointer;
+}
+
+.login {
+    border-radius: 30px;
+    font-weight: bold;
+    width: 90px;
+    margin: 3px;
+}
+.closepage{
+    position:absolute;
+    right:5px;
+    top:4px;
+    cursor:pointer;
+}
+.logincard{
+    position: absolute;
+    left: 50px;
+    top:50px;
+}
+.loginpage{
+    width:250px;
+    height:250px;
+    background-color: rgb(37, 32, 32);
+    color:white;
+    position:fixed;
+    left:700px;
+    top:300px;
+}
+.signuppage{
+    width:250px;
+    height:250px;
+    background-color: rgb(37, 32, 32);
+    color:white;
+    position:fixed;
+    left:700px;
+    top:300px;
+}
+.logbutton{
+    display: flex;
+    justify-content: center;
+    margin:20px 50px;
+}
+.signbutton{
+    display: flex;
+    justify-content: center;
+    margin:20px 50px;
+}
+.input{
+    color:white;
+}
+
+
+.spotify-playlist {
+    border-radius: 7px;
+    height: 100vh;
+    padding: 16px;
+    max-height: 71vh;
+    overflow-y: scroll;
+    margin-bottom: 0px;
+    margin-bottom: 20px;
+}
+
+.spotify-playlist h1 {
+    margin: 10px 0px 30px 0px;
+}
+
+.container2 {
+    margin: 34px;
+    background-color: #000000;
+    /* height: fit-content; */
+    /* border: 2px solid red; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+    max-height: 70vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+/* WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+}
+
+/* note that above webkit css is taken from chatgpt to give the scrollbar black color instead of white(default) */
+
+.card {
+    width: 175px;
+    background-color: #1d1d1d;
+    flex-direction: column;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+    padding: 5px;
+    margin: 0px;
+    position: relative;
+    transition: all .9s;
+    z-index: 2;
+}
+
+.card:hover {
+    scale: 1.1;
+    z-index: 3;
+    cursor: pointer;
+    --a: 1;         
+}
+
+.card img {
+    width: 163px;
+    margin: 5px;
+
+
+}
+hr{
+    margin:12px 0px;
+}
+
+.play {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid green;
+    position: absolute;
+    right: 6px;
+    top: 141px;
+    opacity: var(--a);
+    /* this variable will be assigned value as 1 when the .card is hovered */
+    transition: all 1s ease-out;
+}
+
+.playbar {
+    position: fixed;
+    flex-direction: column;
+    bottom: 0px;
+    /* background-color: rgb(0, 0, 0); */
+    width: 100vw;
+    height: 100px;
+    justify-content: space-around;
+    border-radius: 10px;
+    z-index: 11;
+}
+
+.playbar .seekbar {
+    background-color: grey;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 14px;
+    border-radius: 20px;
+    width: 80%;
+    margin: auto;
+    cursor: pointer;
+    /* this cursor:pointer is used so as to move the circle on the seekbar otherwise it will not move */
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    background-color: green;
+    border-radius: 50px;
+    position: relative;
+    /* note that to make the circle fall on the seekbar line we must make the position of circle as relative while seekbar as absolute and then with the help of the bottom we cn set the position of the circle over the seekbar */
+    bottom: 3px;
+    left: 0%;
+    /* Note that this is given in percentage and therefore we will have to use + "%" in the javascript whenever we have to work on it   */
+    transition: left 0.5s;
+    /*this transition will make the circle to go to a position withing 0.5 sec after reload   */
+}
+.timevol{
+    display: flex;
+    /* margin-right: 79px; */
+    gap:10px;
+    /* width:200px; */
+
+}
+.songinfo {
+    color: white;
+    width:200px;
+}
+
+.abovebar {
+    justify-content: space-around;
+    width: inherit;
+    padding: 10px;
+    margin: 2px 0px 5px 0px;
+}
+.volume{
+    height:20px;
+    width:127px;
+    
+}
+.range{
+    color:aliceblue
+}
+.volumeimg{
+    width: 20px;
+}
+.card p {
+    color: grey;
+    font-size: medium;
+    max-width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* .volume{
+    position:absolute;
+    left:100px;
+    bottom:8px
+} */
+.songbuttons img {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.border{
+    border:2px solid red;
+} 
+
+.flex {
+    display: flex;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
+
+.bg-grey {
+    background-color: rgb(39, 36, 36);
+
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.bg-black {
+    background-color: #161515;
+}
+
+.invert {
+    filter: invert();
+}
+
+.m1 {
+    margin: 9px;
+}
+
+.p1 {
+    padding: 8px;
+}
+
+
+
+
+
+
+
+
+.home span{
+    position:absolute;
+    right:10px;
+    top:10px;
+    display:none;
+    cursor: pointer;
+}
+
+
+/* media queries to make website responsive */
+@media (max-width:1326px) {
+    .left {
+        height:100vh;
+        position: absolute;
+        /* left: -250%; */
+        display:none;
+        transition: all .3s;
+        z-index: 21;
+        width: 333px;
+        background-color: #000000;
+    }
+    .home span{
+        display:block
+    }
+    .right {
+        position: absolute;
+        width: 100vw;
+
+    }
+
+    
+
+    .hamburger {
+        display: block;
+        padding: 2px;
+        margin: 0px 0px 0px 0px;
+        position:absolute;
+        left:0px;
+        top:50px;
+        cursor: pointer;
+        z-index:21;
+    }
+    .leftnav{
+        margin:0px 0px 0px 20px;
+    }
+
+}
+
+@media(max-width:1005px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .hamburger{
+        top:40px;
+    }
+    .leftnav {
+        justify-content: center;
+        width:90%;
+        /* border:2px solid green; */
+        justify-content: space-evenly;
+    }
+    .leftnav .input{
+        width:350px;
+    }
+    
+}
+
+@media(max-width:586px) {
+    .rightnav {
+        flex-direction: column;
+    }
+    .navbutton span{
+        display:none;
+    }
+    .container2{
+        justify-content: space-around;
+    }
+    .abovebar{
+        margin-bottom: 37px;
+    }
+    /* .left{
+        width:100vw;
+    } */
+}
+@media(max-width:544px){
+    .leftnav{
+        flex-direction: column;
+    }
+    .rightnav{
+        flex-direction: column;
+    }
+    .abovebar{
+        height:inherit;
+        width:inherit;
+        margin-bottom: 13px;
+    }
+
+}
+
+@media(max-width:908px){
+    .playbar{
+        flex-direction: column;
+        height:max-content;
+        width:100%;
+    }
+    .abovebar{
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .volume{
+        display:flex;
+        justify-content: space-between;
+        gap:12px;
+    }
+}
+@media(max-width:438px){
+    .rightnav ul{
+        flex-direction: column;
+        
+    }
+    .container2{
+        flex-direction: column;
+        overflow-x: scroll;
+        max-height: 100vh;
+    }
+    
+    .navbutton{
+        display:flex;
+        flex-direction: column;
+    }
+    .leftnav .input{
+        width:150px;
+    }
+    .input placeholder{
+        content: "Search here";
+    }
+    .range{
+        scale:0.8;
+
+    }
+    .volume{
+        display:flex;
+        justify-content: space-between;
+    }
+    
+}
+
+@media(max-width:237px){
+    .songinfo{
+        font-size: smaller;
+        display: flex;
+        justify-content: center;
+    }
+    .container2{
+        max-height: 100%;
+        overflow-y: hidden;
+    }
+    .card{
+        scale:0.7;
+    }
+    .range{
+        scale:0.6;
+    }
+
+}
